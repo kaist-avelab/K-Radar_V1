@@ -16,11 +16,8 @@ We tested the K-Radar detection frameworks on the following environment:
 
 ## Preparing the Dataset
 1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
-
       ID       : kradards
-      
       Password : (We are preparing the server to make K-Radar dataset public.)
-      
 2. Go to the "File Station" folder, and download the dataset by right-click --> download.
    Note for Ubuntu user, there might be some error when unzipping the files. Please check the "readme_to_unzip_file_in_linux_system.txt".
 3. After all files are downloaded, please arrange the workspace directory with the following structure:
