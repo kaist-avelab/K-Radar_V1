@@ -6,8 +6,13 @@
 
 ![image](./docs/imgs/kradar_examples.png)
 
-The following is the list of relevant URLs to help understand the K-Radar dataset and benchmark.
-(1) <a href="https://kaistavelab.direct.quickconnect.to:54568/"> K-Radar paper and appendix </a>
+The URLs listed below are useful for understanding the K-Radar dataset and benchmark:
+* <a href="https://arxiv.org/abs/2206.08171"> K-Radar paper and appendix </a>
+* <a href="http://youtube.com/watch?v=XWAi71AUo5A&feature=youtu.be"> The video clip that shows each sensor measurement dynamically changing during driving under the heavy snow condition </a>
+* <a href="https://www.youtube.com/watch?v=DD3Iks8sB3I"> The video clip that shows the 4D radar tensor & Lidar point cloud (LPC) calibration and annotation process </a>
+* <a href="https://www.youtube.com/watch?v=KyDI32Uck4g"> The video clip that shows the annotation process in the absence of LPC measurements of objects  </a>
+* <a href="https://www.youtube.com/watch?v=q0scC3KZlyI"> The video clip that shows calibration results </a>
+* <a href="https://www.youtube.com/watch?v=b_9TtOxaN1w"> The video clip that shows the GUI-based program for visualization and neural network inference </a>
 
 # K-Radar Dataset
 This is the documentation for how to use our detection frameworks with K-Radar dataset.
