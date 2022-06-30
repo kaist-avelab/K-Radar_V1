@@ -7,7 +7,7 @@
 ![image](./docs/imgs/kradar_examples.png)
 
 The URLs listed below are useful for understanding the K-Radar dataset and benchmark:
-* <a href="https://arxiv.org/abs/2206.08171"> K-Radar paper and appendix </a>
+* <a href="https://arxiv.org/abs/2206.08171"> K-Radar paper and appendix [arxiv] </a>
 * <a href="http://youtube.com/watch?v=XWAi71AUo5A&feature=youtu.be"> The video clip that shows each sensor measurement dynamically changing during driving under the heavy snow condition </a>
 * <a href="https://www.youtube.com/watch?v=DD3Iks8sB3I"> The video clip that shows the 4D radar tensor & Lidar point cloud (LPC) calibration and annotation process </a>
 * <a href="https://www.youtube.com/watch?v=KyDI32Uck4g"> The video clip that shows the annotation process in the absence of LPC measurements of objects  </a>
