@@ -5,7 +5,7 @@
 | K-Radar (ours) | 4D | 4D | HR. | 360. | RTK | 3D | O | O | overcast, fog, rain, sleet, snow | d/n | 35K | 17.5K | - | 17.5K | 38.9K | 37.7K | 112K | 93K | - | - | urban, highway, alleyway, suburban, university, mountain, parkinglots, shoulder | 1 | 118 |
 | VoD | X | 4D | HR. | Front | RTK | 3D | O | O | X | day | 8.7K | 5.1K | 1.3K | 2.3K | n/a | n/a | n/a | 123K | - | - | urban | 0.2 | 64 |
 | Astyx | X | 4D | LR. | Front | X | 3D | X | X | X | day | 0.5K | 0.4K | - | 0.1K | n/a | n/a | n/a | 3K | - | - | urban | 0.01 | 100 |
-| RADDet | 3D | 3D | X | Front | X | 2D | X | C | X | day | 10K | 8K | - | 2K | n/a | n/a | n/a | - | 2.8K | - | n/a | n/a | 50 |
+| RADDet | 3D | 3D | X | Front | X | 2D | X | X | X | day | 10K | 8K | - | 2K | n/a | n/a | n/a | - | 2.8K | - | n/a | n/a | 50 |
 | Zendar | 3D | 3D | LR. | Front | GPS | 2D | O | O | X | day | 4.8K | n/a | - | n/a | n/a | n/a | n/a | - | 11.3K | - | urban | n/a | 90 |
 | RADIATE | 3D | 3D | LR. | Front | GPS | 2D | O | O | overcast, fog, rain, snow | d/n | 44K | 33K | - | 11K | n/a | n/a | n/a | - | 200K | - | urban, highway, parkinglots, suburban | 3 | 100 |
 | CARRADA | 3D | 3D | X | Front | X | 2D | O | X | X | day | n/a | n/a | n/a | n/a | n/a | n/a | n/a | - | 7K | - | parkinglots | 0.35 | 50 |
