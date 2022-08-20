@@ -1,3 +1,5 @@
+Table A. Additional information of K-Radar and related datasets. ‘-’, and ‘n/a’ denote ‘not relevant’ and ‘not applicable’, respectively.
+
 | Dataset | Radar tensor | Radar point cloud | Lidar point cloud | Camera | GPS | Bbox label | Tr. ID | Odom. | Weather conditions | Time | Num. labelled data | Num. labelled train data | Num. labelled val. data | Num. labelled test data | Num. Radar data | Num. Lidar data | Num. camera data | Num. 3D bboxes | Num. 2D bboxes | Num. points of objects | Road type | Driving period [hour] | Maximum range of Radar [m] |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | K-Radar (ours) | 4D | 4D | HR. | 360. | RTK | 3D | O | O | overcast, fog, rain, sleet, snow | d/n | 35K | 17.5K | - | 17.5K | 38.9K | 37.7K | 112K | 93K | - | - | urban, highway, alleyway, suburban, university, mountain, parkinglots, shoulder | 1 | 118 |
