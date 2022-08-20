@@ -1,4 +1,4 @@
-Table A. Additional information of K-Radar and related datasets. ‘-’, and ‘n/a’ denote ‘not relevant’ and ‘not applicable’, respectively.
+### Table A. Additional information of K-Radar and related datasets. ‘-’, and ‘n/a’ denote ‘not relevant’ and ‘not applicable’, respectively.
 
 | Dataset | Radar tensor | Radar point cloud | Lidar point cloud | Camera | GPS | Bbox label | Tr. ID | Odom. | Weather conditions | Time | Num. labelled data | Num. labelled train data | Num. labelled val. data | Num. labelled test data | Num. Radar data | Num. Lidar data | Num. camera data | Num. 3D bboxes | Num. 2D bboxes | Num. points of objects | Road type | Driving period [hour] | Maximum range of Radar [m] |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
