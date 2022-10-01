@@ -24,7 +24,7 @@ We tested the K-Radar detection frameworks on the following environment:
 * CUDA 11.2
 
 # Updates
-[2022-09-30] The 'K-Radar' dataset is made available via a network-attached storage (NAS) download link. (The Google-drive download link is being prepared.)
+[2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) download link. (The Google-drive download link is being prepared.)
 
 ## Preparing the Dataset
 1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 ## Development Kit
 
 ## License
-The 'K-Radar' dataset is published under the CC BY-NC-ND License, and all codes are published under the Apache License 2.0.
+The `K-Radar` dataset is published under the CC BY-NC-ND License, and all codes are published under the Apache License 2.0.
 
 ## Citation
 
