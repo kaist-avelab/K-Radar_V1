@@ -23,6 +23,9 @@ We tested the K-Radar detection frameworks on the following environment:
 * Torch 1.9.1
 * CUDA 11.2
 
+# Updates
+[2022-09-30] The 'K-Radar' dataset is made available via a network-attached storage (NAS) download link. (The Google-drive download link is being prepared.)
+
 ## Preparing the Dataset
 1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
       ID       : kradards
@@ -57,12 +60,35 @@ KRadarFrameworks
 
 ## Requirements
 
+1. Clone the repository
+```
+git clone ...
+```
+
+2. Install the dependencies
+```
+pip install -r requirements.txt
+```
+
 ## Training & Testing
 
 ## Model Zoo
 
 ## Development Kit
 
-## Updates
-
 ## License
+The 'K-Radar' dataset is published under the CC BY-NC-ND License, and all codes are published under the Apache License 2.0.
+
+## Citation
+
+If you find this work is useful for your research, please consider citing:
+```
+@InProceedings{paek2022kradar,
+  title     = {K-Radar: 4D Radar Object Detection Dataset and Benchmark for Autonomous Driving in Various Weather Conditions},
+  author    = {Paek, Dong-Hee and Kong, Seung-Hyun and Wijaya, Kevin Tirta},
+  booktitle = {Proceedings of the Neural Information Processing Systems (NeurIPS) Track on Datasets and Benchmarks},
+  month     = {December},
+  year      = {2022},
+  url       = {https://github.com/kaist-avelab/K-Radar}
+}
+```
