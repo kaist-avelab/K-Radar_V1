@@ -23,7 +23,7 @@ We tested the K-Radar detection frameworks on the following environment:
 * Torch 1.9.1
 * CUDA 11.2
 
-# Updates
+## Updates
 [2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) download link. (The Google-drive download link is being prepared.)
 
 ## Preparing the Dataset
