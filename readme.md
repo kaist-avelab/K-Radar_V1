@@ -18,10 +18,10 @@ The URLs listed below are useful for using the K-Radar dataset and benchmark:
 # K-Radar Dataset
 This is the documentation for how to use our detection frameworks with K-Radar dataset.
 We tested the K-Radar detection frameworks on the following environment:
-* Python 3.8
+* Python 3.9 (3.10+ does not support open3d.)
 * Ubuntu 18.04/20.04
 * Torch 1.9.1
-* CUDA 11.2
+* CUDA 11.3
 
 ## Updates
 [2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) <a href="https://kaistavelab.direct.quickconnect.to:54568/">download link</a>. (The Google-drive download link is being prepared.)
