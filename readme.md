@@ -29,6 +29,9 @@ We tested the K-Radar detection frameworks on the following environment:
 [2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) <a href="https://kaistavelab.direct.quickconnect.to:54568/">download link</a>.
 
 ## Preparing the Dataset
+
+* Via our server
+
 1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
       ID       : kradards
       Password : Kradar2022
@@ -59,6 +62,8 @@ KRadarFrameworks
             ├── 58
 ├── logs
 ```
+
+* Via Google Drive Urls
 
 ## Requirements
 
