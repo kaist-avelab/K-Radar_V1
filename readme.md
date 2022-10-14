@@ -104,8 +104,16 @@ git clone ...
 pip install -r requirements.txt
 ```
 
-## Training & Testing
+## Train & Evaluation
+* To train the model, prepare the total dataset and run
+```
+python train_gpu_0.py ...
+```
 
+* To evaluate the model, modifying the lines that we have noted and run
+```
+python eval_conditional_0.py ...
+```
 
 ## Model Zoo
 
@@ -113,15 +121,19 @@ pip install -r requirements.txt
 RTNH, RTN4D for Radar
 PointPillars, PV-RCNNv2 for Lidar
 
-We only show the detection performance for Sedan class on this page.
+We only show the detection performance for the 'Sedan' class on this page.
 
 Please refer to <a href="https://paperswithcode.com/dataset/k-radar">the Benchmark section of paperswithcode</a>.
 
-## Annotation tool
+## Annotation process
 
-1. [Data generation tools] (from rosbag and  
+1. [Data generation process] (from rosbag and radar ADC files)
+2. [Calibration process]
 
+## GUI-based devkits
 
+1. [Visualization]
+2. [Inference]
 
 ## License
 The `K-Radar` dataset is published under the CC BY-NC-ND License, and all codes are published under the Apache License 2.0.
