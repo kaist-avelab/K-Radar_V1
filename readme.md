@@ -65,6 +65,33 @@ KRadarFrameworks
 
 * Via Google Drive Urls
 
+## Sequence composition
+
+Each of the 58 sequences consists of listed files or folders as follows.
+We add the explanation or usage next to each file or folder.
+```
+Sequence_number.zip (e.g. 1.zip)
+├── cam-front: Front camera images
+├── cam-left: Left camera images
+├── cam-rear: Rear camera images
+├── cam-right: Right camera images
+├── cell_path: File to generate data from bag or radar ADC files (refer to the matlab file generation code.)
+├── description.txt: 
+├── info_calib:
+├── info_label: 
+├── info_label_rev: 
+├── lidar_bev_image:
+├── lidar_bev_image_origin:
+├── lidar_point_cloud:
+├── os1-128:
+├── os2-64:
+├── radar_bev_image:
+├── radar_bev_image_origin:
+├── radar_tesseract:
+├── radar_zyx_cube:
+├── time_info:
+```
+
 ## Requirements
 
 1. Clone the repository
