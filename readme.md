@@ -20,7 +20,7 @@ This is the documentation for how to use our detection frameworks with K-Radar d
 We tested the K-Radar detection frameworks on the following environment:
 * Python 3.9 (3.10+ does not support open3d.)
 * Ubuntu 18.04/20.04
-* Torch 1.9.1
+* Torch 1.10.1
 * CUDA 11.3
 
 ## Updates
@@ -106,12 +106,33 @@ pip install -r requirements.txt
 
 ## Training & Testing
 
+
 ## Model Zoo
 
-## Development Kit
+* (TBD)
+RTNH, RTN4D for Radar
+PointPillars, PV-RCNNv2 for Lidar
+
+We only show the detection performance for Sedan class on this page.
+
+Please refer to <a href="https://paperswithcode.com/dataset/k-radar">the Benchmark section of paperswithcode</a>.
+
+## Annotation tool
+
+1. [Data generation tools] (from rosbag and  
+
+
 
 ## License
 The `K-Radar` dataset is published under the CC BY-NC-ND License, and all codes are published under the Apache License 2.0.
+
+## Acknowledgement
+The K-Radar dataset is contributed by [Dong-Hee Paek](http://ave.kaist.ac.kr/bbs/board.php?bo_table=sub1_2&wr_id=5), [Kevin Tirta Wijaya](http://ave.kaist.ac.kr/bbs/board.php?bo_table=sub1_2&wr_id=7), [Dong-In Kim](http://ave.kaist.ac.kr/bbs/board.php?bo_table=sub1_2&wr_id=13), [Min-Hyeok Sun](http://ave.kaist.ac.kr/bbs/board.php?bo_table=sub1_2&wr_id=14), advised by [Seung-Hyun Kong](http://ave.kaist.ac.kr/bbs/board.php?bo_table=sub1_1).
+
+We thank the maintainers of the following projects that enable us to develop `K-Radar`:
+[`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet) by MMLAB.
+
+This work was partly supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No. 01210790) and the National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (No. 2021R1A2C3008370).
 
 ## Citation
 
