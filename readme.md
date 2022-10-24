@@ -104,6 +104,11 @@ git clone ...
 pip install -r requirements.txt
 ```
 
+3. Modify the code in packages
+'''
+Add line 'from .nms import rboxes' for __init__.py of nms module.
+'''
+
 ## Train & Evaluation
 * To train the model, prepare the total dataset and run
 ```
