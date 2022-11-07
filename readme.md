@@ -23,7 +23,7 @@ We tested the K-Radar detection frameworks on the following environment:
 * Torch 1.10.1
 * CUDA 11.3
 
-## Updates
+## Notice
 [2022-10-14] We have realized that the network-attached storage (NAS) download link is unstable. As such, we are preparing the Google Drive download link similar to our other project <a href="https://github.com/kaist-avelab/K-Lane">K-Lane</a>.
 
 [2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) <a href="https://kaistavelab.direct.quickconnect.to:54568/">download link</a>.
@@ -96,15 +96,29 @@ Sequence_number.zip (e.g. 1.zip)
 
 1. Clone the repository
 ```
-git clone ...
+git clone https://github.com/kaist-avelab/K-Radar.git
+cd K-Radar
 ```
 
-2. Install the dependencies
+2. Create a conda environment
+```
+conda create -n kradar python=3.9
+conda activate kradar
+```
+
+3. Install the dependencies
 ```
 pip install -r requirements.txt
 ```
 
-3. Modify the code in packages
+4. Build packages for kradar
+'''
+python setup.py install
+cd utils/Rotated_IoU/cuda_op
+ptyhon setup.py install
+'''
+
+5. Modify the code in packages
 ```
 Add line 'from .nms import rboxes' for __init__.py of nms module.
 ```
