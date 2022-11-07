@@ -11,8 +11,11 @@ You can generate files LPCs, images, RTK-GPS, and IMU data in '.pcd', '.png', an
 cd K-Radar
 cd dataset_utils/bag_decoder_ros
 catkin_make
+
 # Generating files
 roscore
+source ./devel/setup.bash
 rosrun bag_decoder bag_decoder_node
 ```
-Note that you should change topics and path in bag_decoder.cpp.
+
+Note that you should change required topics and path of bag files and folders in 'bag_decoder.cpp'.
