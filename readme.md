@@ -112,11 +112,11 @@ pip install -r requirements.txt
 ```
 
 4. Build packages for kradar
-'''
+```
 python setup.py install
 cd utils/Rotated_IoU/cuda_op
 ptyhon setup.py install
-'''
+```
 
 5. Modify the code in packages
 ```
