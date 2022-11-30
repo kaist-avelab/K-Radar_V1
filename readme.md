@@ -134,15 +134,8 @@ python train_gpu_0.py ...
 python eval_conditional_0.py ...
 ```
 
-## Model Zoo
+## Code Hierarchy
 
-* (TBD)
-RTNH, RTN4D for Radar
-PointPillars, PV-RCNNv2 for Lidar
-
-We only show the detection performance for the 'Sedan' class on this page.
-
-Please refer to <a href="https://paperswithcode.com/dataset/k-radar">the Benchmark section of paperswithcode</a>.
 
 ## Annotation process
 
