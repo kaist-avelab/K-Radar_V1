@@ -28,6 +28,8 @@ We tested the K-Radar detection frameworks on the following environment:
 
 [2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) <a href="https://kaistavelab.direct.quickconnect.to:54568/">download link</a>.
 
+[2022-12-01] The `K-Radar` dataset is being uploaded to Google Drive. It will take time to upload our entire dataset.
+
 ## Preparing the Dataset
 
 * Via our server
@@ -40,10 +42,7 @@ We tested the K-Radar detection frameworks on the following environment:
 3. After all files are downloaded, please arrange the workspace directory with the following structure:
 ```
 KRadarFrameworks
-├── annot_calib_tools
-      ├── mfiles
       ├── dataset_utils
-├── devkits
       ├── configs
       ├── datasets
       ├── models
@@ -51,6 +50,7 @@ KRadarFrameworks
       ├── resources
       ├── uis
       ├── utils
+      ├── logs
 ├── kradar_dataset
       ├── kradar_0
             ├── 1
@@ -60,10 +60,13 @@ KRadarFrameworks
             ...
             ├── 57
             ├── 58
-├── logs
 ```
 
 * Via Google Drive Urls
+
+The `K-Radar` dataset is being uploaded to Google Drive. It will take time to upload our entire dataset.
+
+1. Sequence 1 - <a href="https://drive.google.com/drive/folders/1nOZ6kbJYpevn9qKHDA4kLNtGUgyd9UHe?usp=share_link" title="seq1">link1</a>, <a href="https://drive.google.com/drive/folders/1vAJsPcMjon8fJCPfDmb0LosdtmYP51kE?usp=share_link" title="seq1">link2</a> 
 
 ## Sequence composition
 
