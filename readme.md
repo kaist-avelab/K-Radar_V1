@@ -135,7 +135,7 @@ python eval_conditional_0.py ...
 ```
 
 ## Code Hierarchy
-![image](./docs/imgs/code_hierarchy.png)
+![image](./resources/imgs/code_hierarchy.png)
 
 ## Annotation process
 
