@@ -1,0 +1,227 @@
+GENERAL:
+  NAME: 'RTNH'
+  VERSION: '1_0'
+  SEED: 2022
+  DEVICE: 'gpu'
+  IS_TRAIN: True
+  RESUME:
+    IS_RESUME: False
+    PATH_EXP: # None
+    START_EP: # None
+    IS_COPY_LOGS: True
+
+  LOGGING:
+    IS_LOGGING: True
+    PATH_LOGGING: './logs'
+    LIST_KEY_LOGGING: ['log_loss'] # for iter
+    
+    IS_SAVE_MODEL: True
+    PER_EPOCH_MODEL: 1
+    PER_EPOCH_UTIL: 1
+
+DATASET:
+  NAME: 'KRadarDataset_v2_1'
+
+  NUM: # Total number of frames, just leave this
+
+  SPLIT:
+    LIST_DIR: ['/media/data3/radar_bin_lidar_bag_files/generated_files', '/media/data4/radar_bin_lidar_bag_files/generated_files', '/media/data2/radar_bin_lidar_bag_files/generated_files']
+    PATH_SPLIT: {
+      'train': './resources/split/train.txt',
+      'test':  './resources/split/test.txt',
+    }
+  
+  LABEL:
+    IS_USE_PREDEFINED_LABEL: False
+    PRE_LABEL_DIR: 
+    ROI_CONSIDER_LABEL: # [0,-100,-50,120,100,50] # (x, y, z) min, (x, y, z) max / Using for tesseract & point cloud
+    ROI_CONSIDER_LABEL_TYPE: 'cube' # 'default'
+    IS_CHECK_VALID_WITH_AZIMUTH: True
+    MAX_AZIMUTH_DEGREE: [-50, 50] # based on apex
+  
+  MODALITY:
+    TYPE_COORD: 1 # 1: Radar, 2: Lidar, 3: Camera
+    IS_CONSIDER_RDR: True
+    IS_CONSIDER_LDR: True
+
+  RDR:
+    IS_CONSIDER_ROI_RDR: False
+    RDR_POLAR_ROI: {
+      'range':     , # [0, 118], # [m], min, max
+      'azimuth':   , # [-51, 52], # [deg], min, max
+      'elevation': , # [-17, 18], # None if without roi
+    }
+
+  RDR_CUBE:
+    USE_PREPROCESSED_CUBE: True
+    IS_COUNT_MINUS_ONE_FOR_BEV: True
+    IS_CONSIDER_ROI_RDR_CB: True
+    DOPPLER:
+      IS_GET_DOPPLER: False
+      IS_ANOTHER_DIR: True
+      DIR_DOPPLER: '/media/donghee/HDD_2/Radar_Data_Doppler'
+    RDR_CB_ROI: {
+      'z': [-2, 5.6], # None (erase)
+      'y': [-6.4, 6.0], # [-9.6, 9.2], # [-6.4, 6.0], # [-32, 31.6],
+      'x': [0, 71.6],
+    }
+    CONSIDER_ROI_ORDER: 'cube -> num' # 'num -> cube'
+    BEV_DIVIDE_WITH: 'bin_z' # 'bin_z' # 'none_minus_1'
+    GRID_SIZE: 0.4 # [m]
+    NORMALIZING: # Just for vis (for network, refer middle encoder)
+      METHOD: 'min_max' # 'max', 'fixed', 'min_max'
+      VALUE: 200.
+    ARR_Z:
+    ARR_Y:
+    ARR_X:
+  
+  CLASS_ID: {
+    'Sedan': 1,
+    'Bus or Truck': -1,
+    'Motorcycle': -1,
+    'Bicycle': -1,
+    'Bicycle Group': -1,
+    'Pedestrian': -1,
+    'Pedestrian Group': -1,
+    'Background': 0,
+  }
+  NUM_CLS: 1 # not including background
+
+  Z_OFFSET: 1.25 # Radar to Lidar [m]
+
+  # List of items to be returned by the dataloader
+  GET_ITEM: {
+    'rdr_tesseract'     : False,
+    'rdr_cube'          : True,
+    'rdr_cube_doppler'  : False,
+    'ldr_pc_64'         : False,
+    'ldr_pc_128'        : False,
+    'cam_front_img'     : False,
+    'rdr_bev_img'       : False,
+  }
+# --------------------------------------
+
+MODEL:
+  NAME: 'Rdr4DNet'
+  SKELETON: 'RadarRoI'
+
+  MIDDLE_ENCODER:
+    NAME: 'RadarSparseProcessor'
+
+  BACKBONE:
+    NAME: 'BaseBackbone3DSparse'
+    TYPE: '3D'
+  
+  HEAD:
+    NAME: 'RdrCubeSedanHead'
+    INPUT_DIM: 768
+    USE_DIRECTION_CLASSIFIER: False
+    BOX_CODE: ['xc', 'yc', 'zc', 'xl', 'yl', 'zl', 'cos', 'sin']
+
+    ### Check default vales of anchor ###
+    ANCHOR_GENERATOR_CONFIG: [
+        {
+            'class_name': 'Sedan',
+            'anchor_sizes': [[4.2, 2.1, 2.0]],
+            'anchor_rotations': [0, 1.57], # [0, 3.14]
+            'anchor_bottom_heights': [0.0],
+            'align_center': False,
+            'feature_map_stride': 8,
+            'matched_threshold': 0.6,
+            'unmatched_threshold': 0.45
+        }
+      ]
+    
+    BG_WEIGHT: 10.
+
+  ROI_HEAD:
+
+OPTIMIZER: # Training
+  NAME: 'SGD'
+
+  LR: 0.0005
+  BETAS: [0.9, 0.999]
+  WEIGHT_DECAY: 0.01
+  MOMENTUM: 0.9
+
+  BATCH_SIZE: 4
+  NUM_WORKERS: 4
+  GRAD_ACCUMULATIONS: 1
+
+  SAVE_CKPT_INTERVAL: 1
+  MAX_EPOCH: 10
+  
+  SCHEDULER: 'CosineAnnealingLR' # None or 'LambdaLR' 
+  TYPE_TOTAL_ITER: 'every'
+
+VAL:
+  IS_VALIDATE: True
+  IS_CONSIDER_VAL_SUBSET: True
+  VAL_PER_EPOCH_SUBSET: 1
+  NUM_SUBSET: 500 # 500 # get subset with random var
+  VAL_PER_EPOCH_FULL: 5 # epoch for validate full dataset
+  DIR: # None -> save in log
+  LIST_VAL_CONF_THR: [0.3, 0.5, 0.7]
+  LIST_VAL_IOU: [0.7, 0.5, 0.3] # This is for logging, change the iou threshold in 'utils/kitti_eval'
+  VAL_IOU_MODE: 'all' # 'each' (implemented with try except per iou)
+
+  DIC_CLASS_VAL: {
+    'Sedan': 'sed',
+    'Bus or Truck': 'bus',
+    'Motorcycle': 'mot',
+    'Bicycle': 'bic',
+    'Bicycle Group': 'big',
+    'Pedestrian': 'ped',
+    'Pedestrian Group': 'peg',
+    'Label': 'bg'
+  }
+  LIST_CLS_PRED: ['bg', 'sed', 'sed']
+  LIST_CLS_LABEL: ['bg', 'sed']
+  LIST_CLS_CARE: [0] # 'Sed', 'Bus', 'Ped'
+
+VIS:
+  # OpenCV
+  DIC_CLASS_BGR: {
+    'Sedan': [0,255,0],
+    'Bus or Truck': [0,50,255],
+    'Motorcycle': [0,0,255],
+    'Bicycle': [0,255,255],
+    'Pedestrian': [255,0,0],
+    'Pedestrian Group': [255,0,100],
+    'Label': [128,128,128]      
+  }
+
+  # Open3D
+  DIC_CLASS_RGB: {
+    'Sedan': [0, 1, 0],
+    'Bus or Truck': [1, 0.2, 0],
+    'Motorcycle': [1, 0, 0],
+    'Bicycle': [1, 1, 0],
+    'Pedestrian': [0, 0, 1],
+    'Pedestrian Group': [0.4, 0, 1],
+    'Label': [0.5, 0.5, 0.5]
+  }
+  
+  # vis for point cloud
+  ROI_VIS:
+    TYPE: 'roi_cube' # None
+    DEFAULT: [0,100,-80,80,-10,60]
+
+  # for bev vis
+  Z_CENTER_DIC: {
+    'Sedan': 0.5,
+    'Bus or Truck': 1.5,
+    'Motorcycle': 0.5,
+    'Bicycle': 0.5,
+    'Pedestrian': 0.5,
+    'Pedestrian Group': 0.5,
+  }
+
+  Z_HEIGHT_DIC: {
+    'Sedan': 1.9,
+    'Bus or Truck': 1.9,
+    'Motorcycle': -1,
+    'Bicycle': -1,
+    'Pedestrian': 2,
+    'Pedestrian Group': -1,
+  }
