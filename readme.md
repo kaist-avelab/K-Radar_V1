@@ -64,7 +64,6 @@ KRadarFrameworks
 
 * Via Google Drive Urls
 The `K-Radar` dataset is being uploaded to Google Drive. It will take time to upload our entire dataset.
-We only provide 4D Radar tensor on 
 
 1. Sequence 1 - <a href="https://drive.google.com/drive/folders/1nOZ6kbJYpevn9qKHDA4kLNtGUgyd9UHe?usp=share_link" title="seq1">link1</a>, <a href="https://drive.google.com/drive/folders/1vAJsPcMjon8fJCPfDmb0LosdtmYP51kE?usp=share_link" title="seq1">link2</a>, <a href="https://drive.google.com/drive/folders/1qFoy0GsZ0Pbp2_IBNlBQbBPT0ln2O77o?usp=share_link" title="seq1">link3</a>, <a href="https://drive.google.com/drive/folders/10BMtMDFH-qTGjwtP7I3NSmSqISuS6ST0?usp=share_link" title="seq1">link4</a>
 
