@@ -32,7 +32,8 @@ __all__ = [ 'PointCloudOs64',
             'get_o3d_line_set_from_tuple_bbox',
             'get_points_power_from_cube_bev',
             'get_list_bboxes_tuples_from_inference',
-            'get_o3d_line_set_from_list_infos', ]
+            'get_o3d_line_set_from_list_infos',
+            'Object3D' ]
 
 class PointCloudOs64:
     def __init__(self, path_pcd):
@@ -220,10 +221,7 @@ def get_filtered_point_cloud_from_plain_text(p_frame, is_with_list_infos=False):
                         point[2], point[3]], list_pc_values)))
 
     # Limit the rough roi
-    pc_os64 = filter_pc_os64_with_roi(pc_os64, [-8, 8, -8, 8])
-
-    if len(pc_os64['values'])==0:
-        return None
+    pc_os64 = filter_pc_os64_with_roi(pc_os64, [-5, 5, -5, 5])
 
     # give rotation (-theta)
     azi_rad = -list_infos[2]/180.*np.pi
@@ -274,19 +272,10 @@ def get_pixel_index_from_m_coordinate(v0, v1, type='yz'):
 def get_front_beside_image_from_point_cloud(pc_os64, radius=1, color=(0,0,0)):
     # pc -> front img
     pc_xyz = pc_os64['values'].copy()
-    # print(pc_xyz)
-    try:
-        list_x = pc_xyz[:,0]
-        list_y = pc_xyz[:,1]
-        list_z = pc_xyz[:,2]
-        # list_i = pc_xyz[:,3]
-    except:
-        img_h, img_w = cnf_ui.IMG_SIZE_YZ
-        img_bev_f = np.full((img_h,img_w,3), 255, dtype=np.uint8)
-        img_h, img_w = cnf_ui.IMG_SIZE_XZ
-        img_bev_b = np.full((img_h,img_w,3), 255, dtype=np.uint8)
-
-        return img_bev_f, img_bev_b
+    list_x = pc_xyz[:,0]
+    list_y = pc_xyz[:,1]
+    list_z = pc_xyz[:,2]
+    # list_i = pc_xyz[:,3]
 
     # YZ: front img
     img_h, img_w = cnf_ui.IMG_SIZE_YZ
@@ -518,3 +507,20 @@ def get_o3d_line_set_from_list_infos(list_infos, color = [0., 0., 0.], is_with_a
     line_set.colors = o3d.utility.Vector3dVector(colors)
 
     return line_set
+
+class Object3D():
+    def __init__(self, xc, yc, zc, xl, yl, zl, rot_rad):
+        self.xc, self.yc, self.zc, self.xl, self.yl, self.zl, self.rot_rad = xc, yc, zc, xl, yl, zl, rot_rad
+        
+        corners_x = np.array([xl, xl, xl, xl, -xl, -xl, -xl, -xl]) / 2 
+        corners_y = np.array([yl, yl, -yl, -yl, yl, yl, -yl, -yl]) / 2 
+        corners_z = np.array([zl, -zl, zl, -zl, zl, -zl, zl, -zl]) / 2 
+
+        self.corners = np.row_stack((corners_x, corners_y, corners_z))
+    
+        rotation_matrix = np.array([
+            [np.cos(rot_rad), -np.sin(rot_rad), 0.0],
+            [np.sin(rot_rad), np.cos(rot_rad), 0.0],
+            [0.0, 0.0, 1.0]])
+        
+        self.corners = rotation_matrix.dot(self.corners).T + np.array([[self.xc, self.yc, self.zc]])

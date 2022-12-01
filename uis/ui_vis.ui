@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>K-Radar Vis</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_0">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>10</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_logo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>211</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>#logo</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_training">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>30</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Trainin&amp;g</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_test">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>50</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Test</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>771</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab_vis">
+    <attribute name="title">
+     <string>Sensor Visualization</string>
+    </attribute>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Camera Front Vis</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Lidar Point Cloud Vis</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Radar Tensor Vis</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_bbox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>191</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>With BBox</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_cal">
+    <attribute name="title">
+     <string>Camera Calibration</string>
+    </attribute>
+    <widget class="QLabel" name="label_frontImg">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>768</width>
+       <height>432</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Left Image</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_1">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>431</y>
+       <width>768</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_cal_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>490</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>0.,600.,360.</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_cal_3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>460</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>0.0,0.6,1.8</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_cal_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>460</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>700.,0.,640.</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_cal_4">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>490</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>6.0,-0.8,-1.6</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_intrinsic">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>440</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Intrinsic Params</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_extrinsic">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>440</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Extrinsic Params</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cal_dim_1">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>460</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[pixel/m]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cal_dim_3">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>460</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[degree]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cal_dim_4">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>490</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[m]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cal_dim_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>490</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[pixel/m]</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>530</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calibrate</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QListWidget" name="listWidget_files">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>80</y>
+     <width>491</width>
+     <height>461</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser_logs">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>540</y>
+     <width>491</width>
+     <height>171</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_frontCam">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>30</y>
+     <width>191</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Right Stereo Cam Image</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_color">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>30</y>
+     <width>191</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set color per class</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_rdr_pc">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>30</y>
+     <width>231</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>With Radar Point Cloud, CFAR:</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_cfar">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>30</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>25,5,0.00001</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
