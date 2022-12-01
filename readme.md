@@ -66,9 +66,6 @@ KRadarFrameworks
 
 The `K-Radar` dataset is being uploaded to Google Drive. It will take time to upload our entire dataset.
 
-The 4D Radar tensor is only available on our server because it is too large to upload to Google Drive. (We can charge for up to 2TB of Google Drive storage space.)
-
-We provide camera images, Lidar point cloud, RTK-GPS, and Radar tensor (for network input) via Google Drive for flexibility.
 
 1. Sequence 1 - <a href="https://drive.google.com/drive/folders/1nOZ6kbJYpevn9qKHDA4kLNtGUgyd9UHe?usp=share_link" title="seq1">link1</a>, <a href="https://drive.google.com/drive/folders/1vAJsPcMjon8fJCPfDmb0LosdtmYP51kE?usp=share_link" title="seq1">link2</a>, <a href="https://drive.google.com/drive/folders/1qFoy0GsZ0Pbp2_IBNlBQbBPT0ln2O77o?usp=share_link" title="seq1">link3</a>, <a href="https://drive.google.com/drive/folders/10BMtMDFH-qTGjwtP7I3NSmSqISuS6ST0?usp=share_link" title="seq1">link4</a>
 
