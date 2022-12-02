@@ -115,19 +115,20 @@ conda create -n kradar python=3.9
 conda activate kradar
 ```
 
-3. Install the dependencies
+3. Install PyTorch
+
+4. Install the dependencies
 ```
 pip install -r requirements.txt
 ```
 
-4. Build packages for kradar
+5. Build packages for kradar
 ```
-python setup.py install
 cd utils/Rotated_IoU/cuda_op
 ptyhon setup.py install
 ```
 
-5. Modify the code in packages
+6. Modify the code in packages
 ```
 Add line 'from .nms import rboxes' for __init__.py of nms module.
 ```

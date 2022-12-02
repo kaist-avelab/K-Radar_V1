@@ -6,7 +6,7 @@
 
 import torch.nn as nn
 
-from models import middle_encoder, backbone_2d, backbone_3d, head, roi_head
+from models import middle_encoder, backbone_2d, backbone_3d, head
 
 class RadarRoI(nn.Module):
     def __init__(self, cfg):

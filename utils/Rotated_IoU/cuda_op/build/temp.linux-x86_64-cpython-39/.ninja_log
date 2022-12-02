@@ -1,0 +1,3 @@
+# ninja log v5
+0	10691	1669949347719588156	/home/oem/Documents/K-Radar/utils/Rotated_IoU/cuda_op/build/temp.linux-x86_64-cpython-39/sort_vert_kernel.o	fb8bdb1653310bb8
+0	13304	1669949350335549453	/home/oem/Documents/K-Radar/utils/Rotated_IoU/cuda_op/build/temp.linux-x86_64-cpython-39/sort_vert.o	b2d288ccb6a8b4bd

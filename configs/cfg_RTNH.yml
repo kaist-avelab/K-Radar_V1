@@ -1,6 +1,6 @@
 GENERAL:
   NAME: 'RTNH'
-  VERSION: '1_0'
+  VERSION: '1'
   SEED: 2022
   DEVICE: 'gpu'
   IS_TRAIN: True
@@ -26,6 +26,7 @@ DATASET:
 
   SPLIT:
     LIST_DIR: ['/media/data3/radar_bin_lidar_bag_files/generated_files', '/media/data4/radar_bin_lidar_bag_files/generated_files', '/media/data2/radar_bin_lidar_bag_files/generated_files']
+    
     PATH_SPLIT: {
       'train': './resources/split/train.txt',
       'test':  './resources/split/test.txt',

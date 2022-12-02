@@ -7,6 +7,6 @@
 from uis.ui_vis import startUi
 
 if __name__ == '__main__':
-    path_cfg = './cfg_RTNH.yml'
+    path_cfg = './configs/cfg_RTNH.yml'
     startUi(path_cfg)
     
