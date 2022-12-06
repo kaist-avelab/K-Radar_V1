@@ -30,6 +30,8 @@ We tested the K-Radar detection frameworks on the following environment:
 
 [2022-12-01] The `K-Radar` dataset is being uploaded to Google Drive. It will take time to upload our entire dataset.
 
+[2022-12-06] We are checking and fixing the NAS server after realizing it has been down.
+
 ## Preparing the Dataset
 
 * Via our server
