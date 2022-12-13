@@ -1,11 +1,4 @@
 """
-# -*- coding: utf-8 -*-
---------------------------------------------------------------------------------
-# author: Donghee Paek, AVELab, KAIST
-# date:   2021.12.28
-# e-mail: donghee.paek@kaist.ac.kr
---------------------------------------------------------------------------------
-# description: load config as easydict from yaml
 # source: https://github.com/open-mmlab/OpenPCDet/blob/1f5b7872b03e9e3d42801872bc59681ef36357b5/pcdet/config.py
 """
 
