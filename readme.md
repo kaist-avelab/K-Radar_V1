@@ -32,6 +32,8 @@ We tested the K-Radar detection frameworks on the following environment:
 
 [2022-12-06] We are checking and fixing the NAS server after realizing it has been down.
 
+[2022-12-16] We have an unidentified problem in allocating IP to our NAS server. We apologize for this inconvenience.
+
 ## Preparing the Dataset
 
 * Via our server
