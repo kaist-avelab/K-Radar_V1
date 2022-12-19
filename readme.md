@@ -26,7 +26,7 @@ We tested the K-Radar detection frameworks on the following environment:
 ## Notice
 [2022-10-14] We have realized that the network-attached storage (NAS) download link is unstable. As such, we are preparing the Google Drive download link similar to our other project <a href="https://github.com/kaist-avelab/K-Lane">K-Lane</a>.
 
-[2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) <a href="https://kaistavelab.direct.quickconnect.to:54568/">download link</a>.
+[2022-09-30] The `K-Radar` dataset is made available via a network-attached storage (NAS) <a href="http://QuickConnect.to/kaistavelab">download link</a>.
 
 [2022-12-01] The `K-Radar` dataset is being uploaded to Google Drive. It will take time to upload our entire dataset.
 
