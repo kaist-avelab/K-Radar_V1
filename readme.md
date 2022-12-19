@@ -34,11 +34,13 @@ We tested the K-Radar detection frameworks on the following environment:
 
 [2022-12-16] We have an unidentified problem in allocating IP to our NAS server. We apologize for this inconvenience.
 
+[2022-12-19] The NAS server's URL has changed and is now accessible.
+
 ## Preparing the Dataset
 
 * Via our server
 
-1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
+1. To download the dataset, log in to <a href="http://QuickConnect.to/kaistavelab"> our server </a> with the following credentials: 
       ID       : kradards
       Password : Kradar2022
 2. Go to the "File Station" folder, and download the dataset by right-click --> download.
