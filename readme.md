@@ -125,7 +125,7 @@ conda activate kradar
 
 4. Install the dependencies
 ```
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 5. Build packages for kradar
