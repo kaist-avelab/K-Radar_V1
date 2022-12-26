@@ -1,8 +1,0 @@
-# Read return of a read-request service call.
-
----
-bool success
-string message
-string section_setting
-string setting
-string value
