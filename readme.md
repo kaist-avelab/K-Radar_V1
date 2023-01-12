@@ -36,6 +36,8 @@ We tested the K-Radar detection frameworks on the following environment:
 
 [2022-12-19] The NAS server's URL has changed and is now accessible.
 
+[2023-01-12] With sparse Radar data, we are updating the K-Radar pipeline. We will deliver efficient and clean code.
+
 ## Preparing the Dataset
 
 * Via our server
