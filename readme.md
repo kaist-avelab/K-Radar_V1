@@ -1,3 +1,5 @@
+# This repository is deprecated.
+
 <p align="center">
   <img src = "./docs/imgs/readme_logo.png" width="60%">
 </p>
