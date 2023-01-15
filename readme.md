@@ -1,4 +1,4 @@
-# This repository is deprecated.
+### This repository is deprecated. Please visit 'https://github.com/kaist-avelab/K-Radar'.
 
 <p align="center">
   <img src = "./docs/imgs/readme_logo.png" width="60%">
